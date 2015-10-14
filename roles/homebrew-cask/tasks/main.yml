@@ -1,0 +1,13 @@
+---
+  - name: install personal cask applications
+    homebrew_cask: name={{item}} state=present
+    with_items:
+  	  - 1password
+	  - anvil
+  	  - dash
+	  - istat-menus
+  	  - google-chrome
+  	  - textmate
+  	  - tower
+  	  - tunnelblick
+  	  - vimr

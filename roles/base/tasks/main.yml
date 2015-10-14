@@ -1,0 +1,6 @@
+---
+# - name: Creates 'code' folder
+#   file: path="{{ code_folder }}" state=directory owner="{{ mac_username }}" group=staff
+
+# - name: Creates '.ssh' folder
+#   file: path="{{ ssh_folder }}" state=directory owner="{{ mac_username }}" group=staff

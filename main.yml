@@ -3,6 +3,13 @@
   connection: local
   gather_facts: no
   sudo: no
+
   roles:
-    - homebrew
-    - homebrew-cask
+    - base
+	- homebrew
+	- homebrew-cask
+
+  vars:
+    - computername: drakken
+    - git_user_name: Chris Johnson
+    - git_user_email: wchrisjohnson@gmail.com

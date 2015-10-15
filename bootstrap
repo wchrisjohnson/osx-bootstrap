@@ -4,18 +4,21 @@ BGreen='\e[1;32m'       # Green
 BRed='\e[1;31m'         # Red
 Color_Off='\e[0m'       # Text Reset
 
+# Playbook to be run
+TARGET_PBK=$1
+
 function setStatusMessage {
     printf "${IRed} --> ${BGreen}$1${Color_Off}\n" 1>&2
 }
 
 setStatusMessage "Checking if we need to ask for a sudo password"
 
-if sudo -n true; then
-    export ANSIBLE_ASK_SUDO_PASS=False
-else
-    sudo -v
-    export ANSIBLE_ASK_SUDO_PASS=True
-fi
+# if sudo -n true; then
+    # export ANSIBLE_ASK_SUDO_PASS=False
+# else
+sudo -v
+export ANSIBLE_ASK_SUDO_PASS=True
+# fi
 
 function triggerError {
     printf "${BRed} --> $1 ${Color_Off}\n" 1>&2
@@ -93,6 +96,6 @@ setStatusMessage "Get all the required roles"
 ansible-galaxy install -f -r requirements.yml -p roles
 
 setStatusMessage "Running the primary ansible playbook"
-ansible-playbook main.yml
+ansible-playbook $TARGET_PBK
 
 setStatusMessage "Done!"

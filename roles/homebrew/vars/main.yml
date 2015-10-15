@@ -6,27 +6,21 @@ homebrew_taps:
   - homebrew/binary
 
 homebrew_packages:
+  - { name: bash }
   - { name: brew-cask }
   - { name: coreutils }
-  - { name: diffutils }
   - { name: erlang }
   - { name: elixir }
   - { name: findutils }
   - { name: git }
   - { name: git-flow }
-  - { name: grep }
-  - { name: gzip }
-  # - { name: heroku-toolbelt }
   - { name: httpie }
   - { name: jq }
-  # - { name: moreutils }
   - { name: nmap }
   - { name: pstree }
   - { name: reattach-to-user-namespace }
   - { name: tmux }
   - { name: tree }
-  # - { name: vim,
-  # install_options: with-lua }
   - { name: wget,
       install_options: enable-iri }
   - { name: zsh }

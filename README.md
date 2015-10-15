@@ -1,9 +1,9 @@
 # Overview
-This repository contains the Ansible playbooks necessary to install and configure the machines I manage. There are numerous ways to use Ansible to orchestrate the installation of stuff; this is one approach.
+This repository contains the Ansible playbooks necessary to install and configure the machines I manage. Ansible offers a multitude of ways to orchestrate an installation; this is my approach.
 
-My approach is influenced heavily by superlumic; I may end up just using his stuff fully. For now, I wanted to try to do it as simply as possible.
+What I've done is heavily influenced by superlumic; I may end up just using his stuff fully. For now, I wanted to try to do it as simply as possible.
 
-# Prepare the mac
+# Preparation
 1. Install 1Password from the Apple Store; sync with iCloud.
 2. Install work related SSH keys from 1Password.
 	- copy files from 1Password to ~/.ssh
@@ -12,5 +12,18 @@ My approach is influenced heavily by superlumic; I may end up just using his stu
 
 # Let's do this!
 ```
-./bootstrap
+./bootstrap hpe-mbp.yml
 ```
+
+# ToDo
+* Figure out how to automate the handling of the prezto .rc files
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+````
+
+# Apps that require manual install
+* Microsoft OneNote (App Store)
+* Junos Pulse

@@ -2,21 +2,21 @@
 - name: install applications via cask
   homebrew_cask: name={{item}} state=present
   with_items:
-    - dash
-    - istat-menus4
-    - google-chrome
-    - handbrake
-    - hipchat
-    - microsoft-office
-    - microsoft-lync
-    - pycharm-ce
-    - screenhero
-    - textmate
-    - tower
-    - tunnelblick
-    - vimr
-    - vagrant
-    - vmware-fusion7
+    # - dash
+    # - istat-menus4
+    # - google-chrome
+    # - handbrake
+    # - hipchat
+    # - microsoft-office
+    # - microsoft-lync
+    # - pycharm-ce
+    # - screenhero
+    # - textmate
+    # - tower
+    # - tunnelblick
+    # - vimr
+    # - vagrant
+    # - vmware-fusion7
 
     # Failed items
     # - anvil 

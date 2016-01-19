@@ -3,3 +3,5 @@ mac_username: wchrisjohnson
 home_folder: "/Users/{{ mac_username }}"
 code_folder: "{{ home_folder }}/code/"
 ssh_folder: "{{ home_folder }}/.ssh/"
+github_username: wchrisjohnson
+github_home: "https://github.com/{{ github_username }}"

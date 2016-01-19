@@ -1,0 +1,2 @@
+---
+- copy: src=".tm_properties" dest="{{ home_folder }}/.tm_properties" force=yes

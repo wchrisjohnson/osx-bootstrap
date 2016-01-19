@@ -26,4 +26,5 @@ done
 
 # Apps that require manual install
 * Microsoft OneNote (App Store)
+* Microsoft Office 2011/2016
 * Junos Pulse

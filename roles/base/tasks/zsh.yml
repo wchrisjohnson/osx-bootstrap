@@ -9,8 +9,10 @@
   when: default_shell.stdout.find('/bin/zsh') == -1 
 
 - git: repo="{{ github_home }}/prezto.git" 
-       dest="{{ home_folder }}/.zprezto" 
+       dest="{{ home_folder }}/.zprezto/" 
+       track_submodules=yes 
        recursive=yes 
+       update=yes
 
 - file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}" dest="{{ home_folder }}/.{{ item }}" state=link
   with_items:

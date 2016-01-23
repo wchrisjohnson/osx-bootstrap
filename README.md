@@ -22,6 +22,7 @@ What I've done is heavily influenced by superlumic; I may end up just using his 
 
 # ToDo
 * Figure out how to automate the handling of the prezto .rc files
+  for now handle the following manually
 ```
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -31,7 +32,7 @@ done
 
 
 # Apps that require manual install
-# This coiuld change to brew-cask based install once the move from symlinks is completed.
+This could change to brew-cask based install once the move from symlinks is completed.
 
 * Microsoft OneNote (App Store)
 * Microsoft Office 2011/2016
